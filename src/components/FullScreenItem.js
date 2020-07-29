@@ -17,7 +17,7 @@ class FullScreenItem extends React.Component {
             <div className="full-screen">
                 <div className="full-screen-heading">{menuItems}</div>
                 <div>{isPlaying&& menuItems==="Songs" && <div>Playing</div>}
-                {!isPlaying && <div>Paused</div>}</div>
+                {!isPlaying&& menuItems==="Songs" && <div>Paused</div>}</div>
                 <img alt={menuItems} src={images[menuItems]} height="90%" width="100%"></img>
             </div>
         )

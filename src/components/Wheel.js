@@ -7,8 +7,7 @@ class Wheel extends React.Component {
     render() {
         return (
             <div className="ipod-controls">
-                <div className="ipod-inner-circle"
-                    >
+                <div className="ipod-inner-circle">
                 </div>
                 <div className="buttons-first-row">
                     <div className="menu-button">

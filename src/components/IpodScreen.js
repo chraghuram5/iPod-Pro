@@ -37,35 +37,41 @@ class IpodScreen extends React.Component {
             return;
         }
 
-        let customRotate=new ZingTouch.Rotate({
+        let customRotate = new ZingTouch.Rotate({
             draggable: false
         })
         let myRegion = new ZingTouch.Region(touchArea);
-        menuItems[0].classList.add("active");
-        //console.log(menuItems[0].innerText);
         myRegion.bind(touchArea, customRotate, function (e) {
-            //console.log(e.detail.angle+" "+e.detail.distanceFromLast+" "+e.detail.distanceFromOrigin);
-            if(e.detail.distanceFromLast===0)
-                return;
-            if (e.detail.distanceFromLast > 15 || Math.abs(this.angle - e.detail.angle) > 300) {
-                for (let i = 0; i < menuItems.length; i++) {
-                    if (menuItems[i].classList[1] === "active") {
-                        menuItems[(i + 1) % menuItems.length].classList.add("active");
-                        menuItems[i].classList.remove("active");
-                        break;
-                    }
-                }
+            
+            if (e.detail.distanceFromOrigin === 0) {
+                this.angle = e.detail.angle;
             }
-            if (e.detail.distanceFromLast < -15 || Math.abs(this.angle - e.detail.angle) > 300) {
-                for (let i = 0; i < menuItems.length; i++) {
-                    if (menuItems[i].classList[1] === "active") {
+
+            if (Math.abs(this.angle - e.detail.angle) > 300 || Math.abs(this.angle - e.detail.angle) > 15) {
+                this.angle = Math.abs(e.detail.angle);
+                if (e.detail.distanceFromLast === 0) {
+                    return;
+                }
+                else if (e.detail.distanceFromLast > 0) {
+                    for (let i = 0; i < menuItems.length; i++) {
                         if (menuItems[i].classList[1] === "active") {
-                            menuItems[(i+menuItems.length-1) % menuItems.length].classList.add("active");
+                            menuItems[(i + 1) % menuItems.length].classList.add("active");
                             menuItems[i].classList.remove("active");
                             break;
                         }
                     }
+                } else {
+                    for (let i = 0; i < menuItems.length; i++) {
+                        if (menuItems[i].classList[1] === "active") {
+                            if (menuItems[i].classList[1] === "active") {
+                                menuItems[(i + menuItems.length - 1) % menuItems.length].classList.add("active");
+                                menuItems[i].classList.remove("active");
+                                break;
+                            }
+                        }
+                    }
                 }
+
             }
         });
 
@@ -77,11 +83,11 @@ class IpodScreen extends React.Component {
             <div className="ipod-screen">
                 <NavBar />
                 <div className="main-display">
-                    {homeScreen && <MenuItemScreen menuItems={menuItems} images={images} currentScreen={currentScreen}/>}
-                    
-                    {screen1 && <MenuItemScreen menuItems={menuItems} images={images} currentScreen={currentScreen}/>}
-                   
-                    {screen2 && <FullScreenItem menuItems={menuItems} images={images}  currentScreen={currentScreen} togglePlayPause={togglePlayPause} isPlaying={isPlaying}/>}
+                    {homeScreen && <MenuItemScreen menuItems={menuItems} images={images} currentScreen={currentScreen} />}
+
+                    {screen1 && <MenuItemScreen menuItems={menuItems} images={images} currentScreen={currentScreen} />}
+
+                    {screen2 && <FullScreenItem menuItems={menuItems} images={images} currentScreen={currentScreen} togglePlayPause={togglePlayPause} isPlaying={isPlaying} />}
                 </div>
             </div>
         )
