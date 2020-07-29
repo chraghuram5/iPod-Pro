@@ -1,0 +1,13 @@
+body{
+  overflow: hidden;
+}
+
+.ipod-page{
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }

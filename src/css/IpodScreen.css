@@ -1,0 +1,40 @@
+.ipod-screen{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    height: 12rem;
+    width: 13rem;
+    border: black solid 2px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.main-display {
+    display: flex;
+    flex-direction: row;
+    height: 11rem;
+    background-image: url("https://i.pinimg.com/originals/46/e7/24/46e7247829fedff7d9a0eee1b3163b58.jpg");
+    background-size: 100% 100%;
+  }
+  
+  .screen-menu {
+    width: 6.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+  }
+  
+  .screen-display {
+    background-color: red;
+    width: 7.5rem;
+  }
+  
+  .menu-item {
+    padding: 0.5rem;
+  }
+  
+  .active {
+    background-color: #3783d8;
+  }
