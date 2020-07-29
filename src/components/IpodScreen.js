@@ -44,7 +44,7 @@ class IpodScreen extends React.Component {
         menuItems[0].classList.add("active");
         //console.log(menuItems[0].innerText);
         myRegion.bind(touchArea, customRotate, function (e) {
-            console.log(e.detail.angle+" "+e.detail.distanceFromLast+" "+e.detail.distanceFromOrigin);
+            //console.log(e.detail.angle+" "+e.detail.distanceFromLast+" "+e.detail.distanceFromOrigin);
             if(e.detail.distanceFromLast===0)
                 return;
             if (e.detail.distanceFromLast > 15 || Math.abs(this.angle - e.detail.angle) > 300) {

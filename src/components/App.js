@@ -145,7 +145,9 @@ class App extends React.Component {
 
   componentDidUpdate() {
     let menuItems = document.getElementsByClassName("menu-item");
-    if (menuItems.length === 0) {
+    let activeItems=document.getElementsByClassName("active")[0];
+    console.log(activeItems);
+    if (activeItems !== undefined || menuItems.length===0) {
       return;
     }
     menuItems[0].classList.add("active");
