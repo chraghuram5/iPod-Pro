@@ -23,7 +23,7 @@ class IpodScreen extends React.Component {
                 {screen2 && <FullScreenItem menuItems={menuItems} images={images} currentScreen={currentScreen} togglePlayPause={togglePlayPause} />}
                 {/* Audio player visible only on screen 2 and not remaining screens but pause and play from any screen on click of play/pause button */}
                 <ReactAudioPlayer
-                    src={images["Music"]}
+                    src={"a"}
                     controls={screen2 && menuItems === "Songs"}
                     id="song"
                 />

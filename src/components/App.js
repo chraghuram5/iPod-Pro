@@ -1,15 +1,6 @@
 import React from 'react';
 import IpodScreen from './IpodScreen';
 import Wheel from './Wheel';
-import Music from '../static/04 Aaja - Nucleya 190Kbps.mp3';
-import Albums from '../static/albums.jpg';
-import Artists from '../static/artists.jpg';
-import COC from '../static/coc-wallpaper.jpeg';
-import Volume from '../static/volume.png';
-import PUBG from '../static/pubg.jpg';
-import Playlist from '../static/playlist.png';
-import Songs from '../static/maxresdefault.jpg';
-import Battery from '../static/batteryImage.png';
 
 class App extends React.Component {
   constructor() {
@@ -29,15 +20,15 @@ class App extends React.Component {
       currentScreen: 'HomeScreen',
       //Images for display
       images: {
-        "Music": Music,
-        "Albums": Albums,
-        "Artists": Artists,
-        "Playlists": Playlist,
-        "Volume": Volume,
-        "Battery": Battery,
-        "PUBG": PUBG,
-        "COC": COC,
-        "Songs":Songs,
+        "Music": "https://cdn5.vectorstock.com/i/1000x1000/91/74/full-battery-icon-vector-22989174.jpg",
+        "Albums": "https://cdn5.vectorstock.com/i/1000x1000/91/74/full-battery-icon-vector-22989174.jpg",
+        "Artists": "https://cdn5.vectorstock.com/i/1000x1000/91/74/full-battery-icon-vector-22989174.jpg",
+        "Playlists": "https://cdn5.vectorstock.com/i/1000x1000/91/74/full-battery-icon-vector-22989174.jpg",
+        "Volume": "https://cdn5.vectorstock.com/i/1000x1000/91/74/full-battery-icon-vector-22989174.jpg",
+        "Battery": "https://cdn5.vectorstock.com/i/1000x1000/91/74/full-battery-icon-vector-22989174.jpg",
+        "PUBG": "https://cdn5.vectorstock.com/i/1000x1000/91/74/full-battery-icon-vector-22989174.jpg",
+        "COC": "https://cdn5.vectorstock.com/i/1000x1000/91/74/full-battery-icon-vector-22989174.jpg",
+        "Songs":"https://cdn5.vectorstock.com/i/1000x1000/91/74/full-battery-icon-vector-22989174.jpg"
       }
     }
   }
@@ -147,12 +138,9 @@ class App extends React.Component {
       screen1 = true;
       screen2 = false;
       let dom = document.getElementsByClassName("full-screen-heading")[0].innerText;
-      console.log('dom' + dom);
       //searching for dom element present in list
       for (let screenItem in screenItems) {
-        console.log('screenItem' + screenItem)
         if (screenItems[screenItem].includes(dom)) {
-          console.log('inside loop' + screenItems[screenItem]);
           menuItems = screenItems[screenItem];
           currentScreen = screenItem;
           break;
@@ -177,7 +165,6 @@ class App extends React.Component {
   componentDidUpdate() {
     let menuItems = document.getElementsByClassName("menu-item");
     let activeItems = document.getElementsByClassName("active")[0];
-    console.log(activeItems);
     if (activeItems !== undefined || menuItems.length === 0) {
       return;
     }

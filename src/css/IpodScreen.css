@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: row;
     height: 11rem;
-    background-image: url("../static/apple.png");
+    background-image: url("https://cdn5.vectorstock.com/i/1000x1000/91/74/full-battery-icon-vector-22989174.jpg");
     background-attachment: fixed;
     background-size: 100% 100%;
   }
