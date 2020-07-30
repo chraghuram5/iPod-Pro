@@ -12,7 +12,7 @@ class NavBar extends React.Component {
         return (
             <div className="nav-bar">
                 <div className="time">{this.state.curTime}<span><FontAwesomeIcon icon={faWifi} /></span></div>
-                <div className="screen-name">IPOD</div>
+                <div className="screen-name">iPod</div>
                 <div className="battery-icon">
                     <FontAwesomeIcon icon={faBatteryThreeQuarters} />
                 </div>

@@ -13,6 +13,8 @@ import Songs from '../static/maxresdefault.jpg';
 class App extends React.Component {
   constructor() {
     super();
+
+    //Initializing the state
     this.state = {
       homeScreen: true,
       screen1: false,
@@ -38,6 +40,7 @@ class App extends React.Component {
     }
   }
 
+  //Menu Items scroll down on clockwise rotation of wheel
   handleClockwise = () => {
     let menuItems = document.getElementsByClassName("menu-item");
     if (menuItems.length === 0) {
@@ -52,6 +55,7 @@ class App extends React.Component {
     }
   }
 
+  //Menu Items scroll down on Anticlockwise rotation of wheel
   handleAntiClockwise = () => {
     let menuItems = document.getElementsByClassName("menu-item");
     if (menuItems.length === 0) {
@@ -68,6 +72,7 @@ class App extends React.Component {
     }
   }
 
+  //Play Pause button on wheel
   togglePlayPause = () => {
 
     let song = document.getElementById("song");
@@ -79,6 +84,7 @@ class App extends React.Component {
     }
   }
 
+  //Select button at the center of the wheel
   handleSelectButton = () => {
     let { homeScreen, screen1, screen2, screenItems, menuItems, currentScreen } = this.state;
     if (screen2)
@@ -113,6 +119,8 @@ class App extends React.Component {
     })
   }
 
+
+  //Menu button at the top of the wheel
   handleMenuButton = () => {
     let { homeScreen, screen1, screen2, screenItems, menuItems, currentScreen } = this.state;
     //console.log("menuButton");
@@ -146,6 +154,7 @@ class App extends React.Component {
     })
   }
 
+  //Setting a menuItem active upon rendering
   componentDidMount() {
     let menuItems = document.getElementsByClassName("menu-item");
     if (menuItems.length === 0) {
@@ -153,7 +162,8 @@ class App extends React.Component {
     }
     menuItems[0].classList.add("active");
   }
-
+  
+  //Setting a menuItem active upon updating
   componentDidUpdate() {
     let menuItems = document.getElementsByClassName("menu-item");
     let activeItems = document.getElementsByClassName("active")[0];

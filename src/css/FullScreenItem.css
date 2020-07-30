@@ -5,5 +5,9 @@
 
 .full-screen-heading{
     text-align: center;
-    background-color: white;
+    color: white;
+    font-size: medium;
+    font-weight: 600;
+    background-image: url("https://i.pinimg.com/originals/46/e7/24/46e7247829fedff7d9a0eee1b3163b58.jpg");
+    background-attachment: fixed;
 }
