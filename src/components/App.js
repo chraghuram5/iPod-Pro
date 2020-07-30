@@ -1,6 +1,14 @@
 import React from 'react';
 import IpodScreen from './IpodScreen';
 import Wheel from './Wheel';
+import Music from '../static/04 Aaja - Nucleya 190Kbps.mp3';
+import Albums from '../static/albums.jpg';
+import Artists from '../static/artists.jpg';
+import COC from '../static/coc-wallpaper.jpeg';
+import Volume from '../static/volume.png';
+import PUBG from '../static/pubg.jpg';
+import Playlist from '../static/playlist.png';
+import Songs from '../static/maxresdefault.jpg';
 
 class App extends React.Component {
   constructor() {
@@ -12,24 +20,20 @@ class App extends React.Component {
       menuItems: ['Music', 'Games', 'Settings'],
       screenItems: {
         "Music": ['Songs', 'Albums', 'Artists', 'Playlists'],
-        "Games": ['PUBG', 'Call Of Duty'],
-        "Settings": ['Volume', 'Battery'],
-        "Songs": ['Song1', 'Song2']
+        "Games": ['PUBG', 'COC'],
+        "Settings": ['Volume', 'Battery']
       },
       currentScreen: 'HomeScreen',
       images: {
-        "Games": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT8v1ZouqoDkEISyXIJjEyfDlFC9LesvL4aOw&usqp=CAU",
-        "Settings": "https://images.macrumors.com/t/jkQHgM7mEiT37sJfhY6vvQuu2jk=/400x0/filters:quality(90)/article-new/2019/08/apple-settings-icon-19.jpg-250x250.jpg?lossy",
-        "Music": "https://www.macworld.co.uk/cmsdata/features/3612963/how_to_get_music_on_iphone_1600home_thumb900_1-1.jpg",
-        "Albums": "https://image.freepik.com/free-icon/music-album_318-1832.jpg",
-        "Artists": "https://www.freeiconspng.com/uploads/artist-music-player-representation-icons--free-download-11.jpg",
-        "Songs": "https://www.macworld.co.uk/cmsdata/features/3612963/how_to_get_music_on_iphone_1600home_thumb900_1-1.jpg",
-        "Playlists": "https://www.macworld.co.uk/cmsdata/features/3612963/how_to_get_music_on_iphone_1600home_thumb900_1-1.jpg",
-        "Game1": "https://www.macworld.co.uk/cmsdata/features/3612963/how_to_get_music_on_iphone_1600home_thumb900_1-1.jpg",
-        "Volume": "https://www.macworld.co.uk/cmsdata/features/3612963/how_to_get_music_on_iphone_1600home_thumb900_1-1.jpg",
-        "Battery": "https://www.macworld.co.uk/cmsdata/features/3612963/how_to_get_music_on_iphone_1600home_thumb900_1-1.jpg",
-        "Song1": "https://www.macworld.co.uk/cmsdata/features/3612963/how_to_get_music_on_iphone_1600home_thumb900_1-1.jpg",
-        "Song2": "https://www.macworld.co.uk/cmsdata/features/3612963/how_to_get_music_on_iphone_1600home_thumb900_1-1.jpg"
+        "Music": Music,
+        "Albums": Albums,
+        "Artists": Artists,
+        "Playlists": Playlist,
+        "Volume": Volume,
+        "Battery": Volume,
+        "PUBG": PUBG,
+        "COC": COC,
+        "Songs":Songs
       }
     }
   }
