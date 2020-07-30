@@ -1,3 +1,4 @@
+/* navigation bar on the top */
 .nav-bar{
     color: black;
     height: 1rem;
@@ -9,14 +10,17 @@
     padding: 0.15rem;
 }
 
+/* battery icon on right with green color */
 .battery-icon{
     color: rgb(53, 175, 135);
 }
 
+/* time on left */
 .time{
     font-size: smaller;
 }
 
+/* wifi symbol beside time */
 .time span{
     font-size: 0.7rem;
     align-content: center;

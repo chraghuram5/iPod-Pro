@@ -9,6 +9,7 @@ import Volume from '../static/volume.png';
 import PUBG from '../static/pubg.jpg';
 import Playlist from '../static/playlist.png';
 import Songs from '../static/maxresdefault.jpg';
+import Battery from '../static/batteryImage.png';
 
 class App extends React.Component {
   constructor() {
@@ -26,16 +27,17 @@ class App extends React.Component {
         "Settings": ['Volume', 'Battery']
       },
       currentScreen: 'HomeScreen',
+      //Images for display
       images: {
         "Music": Music,
         "Albums": Albums,
         "Artists": Artists,
         "Playlists": Playlist,
         "Volume": Volume,
-        "Battery": Volume,
+        "Battery": Battery,
         "PUBG": PUBG,
         "COC": COC,
-        "Songs":Songs
+        "Songs":Songs,
       }
     }
   }
@@ -46,6 +48,8 @@ class App extends React.Component {
     if (menuItems.length === 0) {
       return;
     }
+
+    //Setting element as active based on the amount of rotation of wheel
     for (let i = 0; i < menuItems.length; i++) {
       if (menuItems[i].classList[1] === "active") {
         menuItems[(i + 1) % menuItems.length].classList.add("active");
@@ -61,6 +65,8 @@ class App extends React.Component {
     if (menuItems.length === 0) {
       return;
     }
+
+    //Setting element as active based on the amount of rotation of wheel
     for (let i = 0; i < menuItems.length; i++) {
       if (menuItems[i].classList[1] === "active") {
         if (menuItems[i].classList[1] === "active") {
@@ -89,6 +95,7 @@ class App extends React.Component {
     let { homeScreen, screen1, screen2, screenItems, menuItems, currentScreen } = this.state;
     if (screen2)
       return;
+      // changing screens based upon the boolean values homeScreen, screen1, screen2
     if (homeScreen) {
       let dom = document.getElementsByClassName("active")[0].innerText;
       homeScreen = false;
@@ -126,6 +133,8 @@ class App extends React.Component {
     //console.log("menuButton");
     if (homeScreen)
       return;
+
+      // changing screens based upon the boolean values homeScreen, screen1, screen2
     if (screen1) {
       homeScreen = true;
       screen1 = false;
@@ -139,6 +148,7 @@ class App extends React.Component {
       screen2 = false;
       let dom = document.getElementsByClassName("full-screen-heading")[0].innerText;
       console.log('dom' + dom);
+      //searching for dom element present in list
       for (let screenItem in screenItems) {
         console.log('screenItem' + screenItem)
         if (screenItems[screenItem].includes(dom)) {
@@ -179,7 +189,9 @@ class App extends React.Component {
 
     return (
       <div className="ipod-page">
+        {/*Container for Ipod*/}
         <div className="ipod-container">
+          {/* iPod screen */}
           <IpodScreen
             menuItems={menuItems}
             homeScreen={homeScreen}
@@ -194,6 +206,7 @@ class App extends React.Component {
             handleClockwise={this.handleClockwise}
             handleAntiClockwise={this.handleAntiClockwise}
           />
+          {/* Wheel(circle) */}
           <Wheel
             onSelectButton={this.handleSelectButton}
             onMenuButton={this.handleMenuButton}

@@ -35,6 +35,8 @@ class Wheel extends React.Component {
 
         //Circle touch
         let wheel = document.getElementsByClassName("ipod-controls")[0];
+
+        //prevent drag on clicking and moving mouse pointer
         let customRotate = new ZingTouch.Rotate({
             draggable: false
         })
@@ -43,6 +45,7 @@ class Wheel extends React.Component {
             if (e.detail.distanceFromOrigin === 0) {
                 this.angle = e.detail.angle;
             }
+
             if (Math.abs(this.angle - e.detail.angle) > 300 || Math.abs(this.angle - e.detail.angle) > 15) {
                 this.angle = Math.abs(e.detail.angle);
                 if (e.detail.distanceFromLast === 0) {
@@ -60,14 +63,21 @@ class Wheel extends React.Component {
 
     render() {
         return (
+
+            /*wheel*/
             <div className="ipod-controls">
+                {/* inner circle button or select button */}
                 <div className="ipod-inner-circle">
                 </div>
+
+                {/* menu button row */}
                 <div className="buttons-first-row">
                     <div className="menu-button">
                         MENU
                     </div>
                 </div>
+
+                {/* next and previous buttons */}
                 <div className="buttons-second-row">
                     <div className="previous-button">
                         <FontAwesomeIcon icon={faFastBackward} />
@@ -76,6 +86,8 @@ class Wheel extends React.Component {
                         <FontAwesomeIcon icon={faFastForward} />
                     </div>
                 </div>
+
+                {/* play/pause button */}
                 <div className="buttons-third-row">
                     <div className="pause-button">
                         <FontAwesomeIcon icon={faPlay} />

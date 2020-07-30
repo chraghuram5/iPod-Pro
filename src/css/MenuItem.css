@@ -1,9 +1,11 @@
+/* each menuItem */
 .menu-item{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
+/* screen title on fullscreen */
 .screen-title{
     margin-left: 0.25rem;
     font-size: medium;
@@ -11,6 +13,8 @@
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
+
+/* arrow icon on side */
 .side-icon{
     color: white;
 }

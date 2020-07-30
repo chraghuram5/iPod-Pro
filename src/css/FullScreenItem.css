@@ -1,13 +1,14 @@
+/* full screen page height and width */
 .full-screen{
     width: 100%;
     height:100%;
 }
 
+/* heading on top of fullscreen */
 .full-screen-heading{
     text-align: center;
     color: white;
     font-size: medium;
     font-weight: 600;
-    background-image: url("https://i.pinimg.com/originals/46/e7/24/46e7247829fedff7d9a0eee1b3163b58.jpg");
-    background-attachment: fixed;
+    background-color: black;
 }

@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import './index.css';
 import App from './components/App';
 import './css/IpodScreen.css';
 import './css/MenuItem.css';
 import './css/NavBar.css';
-import './css/RightDisplay.css';
 import './css/common.css';
 import './css/App.css';
 import './css/Wheel.css';

@@ -5,6 +5,7 @@ class MenuItem extends React.Component {
     render() {
         const {menuItem}=this.props
         return (
+            //Menu Items in each screen
             <div className="menu-item">
                 <div>{menuItem}</div>
                 <div className="side-icon"><FontAwesomeIcon icon={faChevronRight} /></div>

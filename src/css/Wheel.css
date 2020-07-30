@@ -1,3 +1,5 @@
+
+/* inner circle inside wheel */
 .ipod-inner-circle {
     position: absolute;
     width: 4rem;
@@ -7,6 +9,7 @@
     margin: 3rem;
   }
   
+  /* wheel */
   .ipod-controls {
     margin-bottom: 1rem;
     margin-top: 1rem;
@@ -21,6 +24,7 @@
     font-size: 0.8rem;
   }
   
+  /* menu button row and playpause button */
   .buttons-first-row,
   .buttons-third-row {
     display: flex;
@@ -29,6 +33,7 @@
     color: black;
   }
   
+  /* next and previous buttons */
   .buttons-second-row {
     display: flex;
     flex-direction: row;
